@@ -18,19 +18,36 @@
 body{
     font-family: 'Times New Roman', Times, serif;
     width: 100%;
+    background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+    
 }
-header{
-    margin: auto;
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3); /* semi-transparent white */
+  backdrop-filter: blur(20px); /* frosted glass blur */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  z-index: 1000;
+  transition: all 0.3s ease; /* for smooth motion */
+  box-shadow: none; /* no shadow initially */
 }
-#header{
+header.scrolled {
+  background: rgba(255, 255, 255, 0.6); /* less transparent */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+}
+
+.header{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--white-);
     box-shadow: none;
-    padding: 30px
+    padding: 10px 40px;
+    
 }
+
 #menu {
   display: flex;
   gap: 5px;
@@ -45,9 +62,11 @@ header{
 #headericon{
     display: none;
 }
-.headerleft{
+.nav-header{
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 .headerlogo{
     width: 70px;
@@ -57,7 +76,25 @@ header{
   display: flex;
   gap: 10px;   /* adds space between Login and Sign-Up */
 }
-.headerbtns{
+
+.headerbtns:first-child{
+    background-color: var(--snow);
+    color: var(--bluey-);
+    border: 1px solid var(--bluey-);
+    padding: 10px;
+    width: 100px;
+    max-width: 100px;
+    border-radius: 10px;
+    transform: translate(0, 0);
+    transition: transform 0.6s, border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+.headerbtns:first-child:hover{
+    transform: translate(0px, -10px);
+    color: var(--white-);
+    background-color: var(--bluey-);
+    border: 1px solid var(--bluey-);
+}
+.headerbtns:last-child{
   padding: 10px;
   width: 100px;
   max-width: 100px;
@@ -68,12 +105,11 @@ header{
   transform: translate(0, 0);
   transition: transform 0.6s, border-color 0.3s, background-color 0.3s, color 0.3s;
 }
-.headerbtns:hover{
+.headerbtns:last-child:hover{
     transform: translate(0px, -10px);
     color: var(--bluey-);
     background-color: rgb(255, 255, 255);
     border: 1px solid var(--bluey-);
-
 }
 
 header ul{
@@ -88,7 +124,7 @@ header ul a {
     text-decoration: none;
     color: var(--black-);
     font-weight: bolder;
-    padding: 20px;
+    padding: 10px 15px 10px 15px;
     border-radius: 5px;
     font-size: 15px;
 }
@@ -96,9 +132,11 @@ header ul a {
     display: block;
 }
 .header-link a:hover{
-    background-color: var(--bluey-);
-    color: var(--white-);
     font-weight: bolder;
+    color: #ffffff;
+    background: rgba(59, 130, 246, 0.3); /* bluish glass */
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 /* Section1 */
 
@@ -110,15 +148,19 @@ header ul a {
     align-items: center;
     padding-block-start: 80px;
     padding-block-end: 20px;
+    
 }
 .sec1left{
     width: 100%;
     max-width: 500px;
 }
 .sec1left p{
-    font-size: 18px;
-    font-weight: 100;
-    opacity: 0.8;
+ 
+  color: #111827; /* almost black */
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+
 }
 .sec1btndiv{
     padding-block: 20px;
@@ -140,21 +182,32 @@ header ul a {
 .sec1right img{
     width: 500px;
     height: 500px;
+    border-radius: 20px;
     object-fit: cover;
 }
 /* section two */
 .section2{
-    width: 40%;
+    width: 100%;
     margin: auto;
-    padding-block: 70px;
+    padding-block: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.sec2content{
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
 }
 #section2 h2{
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 900;
     padding-block: 10px;
 }
-#sec2content li{
+.sec2content li{
     font-size: 20px;
+    font-weight: 400;
+    line-height: 1.4;
 }
 /* section3 start */
 #sectionIII{
@@ -246,10 +299,9 @@ header ul a {
     background-repeat: no-repeat;
     border: none;
 }
-#sectionIV-content h4{
-    font-size: 40px;
+#sectionIV-content h2{
     line-height: 50px;
-    color: blue;
+    color: var(--white-);
     text-align: center;
     
 }
@@ -325,12 +377,13 @@ footer{
     cursor: pointer;
 }
 /* media Query for mobile devices */
-@media screen and (min-width: 320px) and (max-width: 540px){
+@media screen and (min-width: 220px) and (max-width: 540px){
 .headerleft{
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
+
 #menu .headerbtn {
   display: flex;
   flex-direction: column;
@@ -357,6 +410,7 @@ footer{
   border: none;
   border-radius: 8px;
   padding: 10px;
+  margin: 10px ;
   font-weight: bold;
   cursor: pointer;
 }

@@ -14,35 +14,33 @@
 <body>
     
 <header>
-  <div id="header">
-    <div class="headerleft">
-      <img src="images/masswiftlogo.jpg" alt="PIC" class="headerlogo">
-    </div>
-    <div>
-        <ul id="menu" class="menu">
-        <li class="header-link"><a href="#">Home</a></li>
-        <li class="header-link"><a href="#about-us">About-Us</a></li>
-        <li class="header-link"><a href="#">Contact</a></li>
-        <li class="header-link"><a href="#sectionIII" onclick="Service();">Services</a></li>
-        <li class="header-link"><a href="#Why-us">Why Us?</a></li>
-        <li class="header-link">
-        <div>
-        <a href="https://play.google.com/store" target="_blank">Download our App<img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
-        alt="Get it on Google Play" style="height:20px; padding-left: 5px;">
-        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" 
-        alt="Download on the App Store" style="height:20px;">
-        </a>
-        </div> 
-        </li>
-        </ul>
-    </div>
-    <div class="headerbtn menu-buttons">
-      <button class="headerbtns" onclick="window.location.href='https://massolution.com.ng/login'" >Login</button>
-      <button class="headerbtns" onclick="window.location.href='https://massolution.com.ng/register'">Sign-Up</button>
-    </div>
-    <div class="hamburger-menu">
-      <button id="menuButton">&#9776;</button>
-    </div>
+    <nav class="header">
+        <div class="nav-header">
+            <div>
+                <img src="images/masswiftlogo.jpg" alt="PIC" class="headerlogo">
+            </div>
+                <div class="hamburger-menu">
+                <button id="menuButton">&#9776;</button>
+                </div>
+            <ul id="menu" class="menu">
+                <li class="header-link"><a href="#">Home</a></li>
+                <li class="header-link"><a href="#about-us">About Us</a></li>
+                <li class="header-link"><a href="#">Contact</a></li>
+                <li class="header-link"><a href="#sectionIII" onclick="Service();">Services</a></li>
+                <li class="header-link"><a href="#Why-us">Why Us?</a></li>
+                <li class="header-link"><a href="https://play.google.com/store" target="_blank">Download our App</a></li>
+            </ul>
+            <div>
+                <button class="headerbtns" onclick="window.location.href='https://massolution.com.ng/register'">Sign up</button>
+
+                <button class="headerbtns" onclick="window.location.href='https://massolution.com.ng/login'" >Login</button>
+            </ul>
+            </div>
+        </div>
+    </nav>
+  <div >
+
+
   </div>
 </header>
     <main>
@@ -62,23 +60,24 @@
             </div>
             <div class="sec1right">
                 <div>
-                    <img src="images/bills payment animation.jpg" alt="IMG"/>
+                    <img id="slideshow" src="images/bills payment animation.jpg" alt="IMG"/>
                 </div>
             </div>
           </div>
         </section>
         <section>
         <div class="section2" id="Why-us">
-            <h2>Why us?</h2>
             <div class="sec2content">
-                <ul>
-                    <li>We are very fast and reliable..</li>
-                    <li>You can also register as an agent & get 30% discount..</li>
-                    <li> Buy airtime and get cash back..</li>
-                    <li> Data available at cheaper prices..</li>
-                    <li> Print recharge cards at any time..</li>
-                    <li>Get WAEC, NECO and NABTEB pins..</li>
-                </ul>
+                <h2>Why us?</h2>
+                    <ul>
+                        <li>We are very fast and reliable..</li>
+                        <li>You can also register as an agent & get 30% discount..</li>
+                        <li> Buy airtime and get cash back..</li>
+                        <li> Data available at cheaper prices..</li>
+                        <li> Print recharge cards at any time..</li>
+                        <li>Get WAEC, NECO and NABTEB pins..</li>
+                    </ul>
+            </div>
         </div>
        </section>
        <section id="sectionIII">
@@ -144,7 +143,7 @@
        </section>
        <section id="sectionIV">
         <div id="sectionIV-content">
-            <h4>MASSOLUTION</h4>
+            <h2>MASSOLUTION</h2>
             <p>JOIN US NOW AND START ENJOYING OUR SERVICES @MASSWIFT_SOLUTUON VENTURES <br><br><br>
                 OUR APP IS ALSO AVAILABLE ON PLAYSTORE AND IOS</p>
             

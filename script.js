@@ -25,6 +25,27 @@ function scrollToSection(register) {
     section.scrollIntoView({ behavior: "smooth" });
   }
 }
+ const images = [
+  "images/bills payment animation.jpg",
+  "images/happy couple.webp",
+  "images/MASSSWIFT AD.webp",
+ ]
+ let index = 0;
+ const imgElement = document.getElementById("slideshow")
+ function changeImage() {
+    index = (index + 1) % images.length;
+    imgElement.src = images[index];
+ }
+  setInterval(changeImage, 30000);
+window.addEventListener("scroll", function() {
+  const header = document.querySelector("header");
+  if (window.scrollY > 50) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
+
 
 console.log("Script loaded!");
 /*

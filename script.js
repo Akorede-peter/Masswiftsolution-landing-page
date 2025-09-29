@@ -27,7 +27,7 @@ function scrollToSection(register) {
 }
  const images = [
   "images/bills payment animation.jpg",
-  "images/happy couple.webp",
+  "images/happy-couple.webp",
   "images/MASSSWIFT AD.webp",
  ]
  let index = 0;
@@ -36,7 +36,7 @@ function scrollToSection(register) {
     index = (index + 1) % images.length;
     imgElement.src = images[index];
  }
-  setInterval(changeImage, 30000);
+  setInterval(changeImage, 20000);
 window.addEventListener("scroll", function() {
   const header = document.querySelector("header");
   if (window.scrollY > 50) {
